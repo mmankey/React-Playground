@@ -1,9 +1,5 @@
-.container {
-  display: flex;
-  height: 100vh;
-}
-.child {
-  margin:auto;
+html {
+  overflow-y: scroll;
 }
 
 @keyframes App-logo-spin {
