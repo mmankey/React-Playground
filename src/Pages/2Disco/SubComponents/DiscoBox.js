@@ -2,7 +2,7 @@
 // This is a Stateless Functional Component
 import React from "react";
 
-const DiscoBox = props => <div style={props.style} >DiscoBox</div>;
+const DiscoBox = props => <div style={{backgroundColor: props.color, height: props.height, width: props.width}}>DiscoBox</div>;
 
 
 export default DiscoBox;
