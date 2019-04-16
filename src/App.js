@@ -1,17 +1,20 @@
 import React, { Component } from "react";
-import { BrowserRouter, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "./App.css";
 import Welcome from "./Pages/1Welcome/Welcome";
 import Navbar from "./Components/Navbar/Navbar";
-
+import Disco from "./Pages/2Disco/Disco";
 class App extends Component {
   render() {
     return (
       <div>
         <Navbar />
-        <BrowserRouter>
-          <Route path="/" component={Welcome} />
-        </BrowserRouter>
+        <Router>
+          <Switch>
+            <Route exact path="/" component={Welcome} />
+            <Route exact path="/Disco" component={Disco} />
+          </Switch>
+        </Router>
       </div>
     );
   }
