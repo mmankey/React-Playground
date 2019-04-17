@@ -172,7 +172,7 @@ class Disco extends React.Component {
 
   componentDidMount() {
     this.makeBoxes();
-    this.interval = setInterval(() => this.getRandBoxSetRandColor(), 100);
+    this.interval = setInterval(() => this.getRandBoxSetRandColor(), 10);
   }
 
   makeBoxes() {
