@@ -2,17 +2,22 @@
 
 import React, { Component } from "react";
 import DiscoBox from "./SubComponents/DiscoBox";
+import "./Disco.css"
 
 class Disco extends React.Component {
   constructor(props) {
     super(props);
     this.getRandomColor = this.getRandomColor.bind(this);
     this.makeBoxes = this.makeBoxes.bind(this);
+    this.getRandBoxSetRandColor = this.getRandBoxSetRandColor.bind(this);
     this.state = {
-      numBoxes: 10,
+      numBoxes: 100,
       width: "100px",
       height: "100px",
       backgroundColor: "blue",
+      display: "inline-block",
+      margin: "5px",
+      boxes: [],
       allColors: [
         "AliceBlue",
         "AntiqueWhite",
@@ -163,16 +168,11 @@ class Disco extends React.Component {
         "YellowGreen"
       ]
     };
-    this.style = {
-      width: this.state.width,
-      height: this.state.height,
-      backgroundColor: this.state.backgroundColor,
-      margin: "5px"
-    };
   }
 
   componentDidMount() {
     this.makeBoxes();
+    this.interval = setInterval(() => this.getRandBoxSetRandColor(), 100);
   }
 
   makeBoxes() {
@@ -187,16 +187,32 @@ class Disco extends React.Component {
     return this.state.allColors[colorIndex];
   }
 
+  getRandBoxSetRandColor() {
+    const boxes = this.state.boxes.slice();
+    const randIndex = Math.floor(Math.random() * boxes.length);
+    boxes[randIndex] = this.getRandomColor();
+    this.setState({ boxes });
+  }
+
   render() {
     return (
-      <div>
-        Disco
-        <DiscoBox
-          style={this.style}
+      <div className="discoDiv">
+
+        {this.state.boxes.map((color, index) => (
+          <DiscoBox
+            key={index}
+            color={color}
+            height={this.state.height}
+            width={this.state.width}
+            margin={this.state.margin}
+            display={this.state.display}
+          />
+        ))}
+        {/* <DiscoBox
           color={this.state.backgroundColor}
           height={this.state.height}
           width={this.state.width}
-        />
+        /> */}
       </div>
     );
   }
