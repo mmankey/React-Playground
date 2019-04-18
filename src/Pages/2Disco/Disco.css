@@ -1,4 +1,12 @@
 .discoDiv {
     background-color: black;
     min-height: 90vh;
+    display: flex;
+    justify-content: center
+   
+}
+
+.discoBoxDiv{
+    margin: auto;
+    
 }

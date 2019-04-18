@@ -1,6 +1,6 @@
 // ./Pages/Disco.js
 
-import React, { Component } from "react";
+import React from "react";
 import DiscoBox from "./SubComponents/DiscoBox";
 import "./Disco.css"
 
@@ -12,8 +12,9 @@ class Disco extends React.Component {
     this.getRandBoxSetRandColor = this.getRandBoxSetRandColor.bind(this);
     this.state = {
       numBoxes: 100,
-      width: "100px",
-      height: "100px",
+      width: "10%",
+      height: "0",
+      paddingBottom: "10%",
       backgroundColor: "blue",
       display: "inline-block",
       margin: "5px",
@@ -197,7 +198,7 @@ class Disco extends React.Component {
   render() {
     return (
       <div className="discoDiv">
-
+        <div className="discoBoxDiv">
         {this.state.boxes.map((color, index) => (
           <DiscoBox
             key={index}
@@ -206,6 +207,7 @@ class Disco extends React.Component {
             width={this.state.width}
             margin={this.state.margin}
             display={this.state.display}
+            paddingBottom={this.state.paddingBottom}
           />
         ))}
         {/* <DiscoBox
@@ -213,6 +215,7 @@ class Disco extends React.Component {
           height={this.state.height}
           width={this.state.width}
         /> */}
+        </div>
       </div>
     );
   }
