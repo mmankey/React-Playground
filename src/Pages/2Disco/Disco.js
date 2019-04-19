@@ -2,7 +2,7 @@
 
 import React from "react";
 import DiscoBox from "./SubComponents/DiscoBox";
-import "./Disco.css"
+import "./Disco.css";
 
 class Disco extends React.Component {
   constructor(props) {
@@ -199,22 +199,17 @@ class Disco extends React.Component {
     return (
       <div className="discoDiv">
         <div className="discoBoxDiv">
-        {this.state.boxes.map((color, index) => (
-          <DiscoBox
-            key={index}
-            color={color}
-            height={this.state.height}
-            width={this.state.width}
-            margin={this.state.margin}
-            display={this.state.display}
-            paddingBottom={this.state.paddingBottom}
-          />
-        ))}
-        {/* <DiscoBox
-          color={this.state.backgroundColor}
-          height={this.state.height}
-          width={this.state.width}
-        /> */}
+          {this.state.boxes.map((color, index) => (
+            <DiscoBox
+              key={index}
+              color={color}
+              height={this.state.height}
+              width={this.state.width}
+              margin={this.state.margin}
+              display={this.state.display}
+              paddingBottom={this.state.paddingBottom}
+            />
+          ))}
         </div>
       </div>
     );
