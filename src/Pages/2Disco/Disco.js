@@ -16,7 +16,6 @@ class Disco extends React.Component {
       height: "0",
       paddingBottom: "10%",
       backgroundColor: "blue",
-      display: "inline-block",
       margin: "5px",
       boxes: [],
       allColors: [
@@ -206,7 +205,6 @@ class Disco extends React.Component {
               height={this.state.height}
               width={this.state.width}
               margin={this.state.margin}
-              display={this.state.display}
               paddingBottom={this.state.paddingBottom}
             />
           ))}

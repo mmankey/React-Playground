@@ -4,6 +4,8 @@ import "./App.css";
 import Welcome from "./Pages/1Welcome/Welcome";
 import Navbar from "./Components/Navbar/Navbar";
 import Disco from "./Pages/2Disco/Disco";
+import FormikDemo from "./Pages/3Formik/FormikDemo";
+
 class App extends Component {
   render() {
     return (
@@ -13,6 +15,7 @@ class App extends Component {
           <Switch>
             <Route exact path="/" component={Welcome} />
             <Route exact path="/Disco" component={Disco} />
+            <Route exact path="/FormikDemo" component={FormikDemo} />
           </Switch>
         </Router>
       </div>

@@ -1,0 +1,9 @@
+.flexParent {
+    display:flex;
+    
+}
+
+.flexChild {
+    margin:auto;
+    width:40vw;
+}

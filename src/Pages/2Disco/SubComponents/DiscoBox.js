@@ -9,8 +9,7 @@ const DiscoBox = props => (
       height: props.height,
       width: props.width,
       margin: props.margin,
-      display: props.display,
-      paddingBottom: props.paddingBottom,
+      paddingBottom: props.paddingBottom
     }}
   />
 );

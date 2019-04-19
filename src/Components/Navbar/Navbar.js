@@ -16,14 +16,20 @@ class Navbar extends Component {
             <ul className="left ">
               <li>
                 <a href="\" class="brand-logo margin">
-                  React Playground
+                  <span className="hide-on-small-only">React Playground</span>
                 </a>
               </li>
             </ul>
             {/* Dropdown Structure */}
             <ul id="dropdown1" className="dropdown-content grey darken-4">
               <li>
+                <a href="/">Home</a>
+              </li>
+              <li>
                 <a href="/Disco">Disco</a>
+              </li>
+              <li>
+                <a href="/FormikDemo">Formik</a>
               </li>
               {/* <li>
                 <a href="#!">two</a>
