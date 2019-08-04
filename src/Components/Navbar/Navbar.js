@@ -38,10 +38,10 @@ class Navbar extends Component {
               <li>
                 <a href="#!">three</a>
               </li> */}
-            </ul>
-            <li>
+              <li>
                 <a href="/CatHooks">CatHooks</a>
               </li>
+            </ul>
 
             <ul className="right ">
               <li>
