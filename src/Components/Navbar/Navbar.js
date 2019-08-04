@@ -39,6 +39,9 @@ class Navbar extends Component {
                 <a href="#!">three</a>
               </li> */}
             </ul>
+            <li>
+                <a href="/CatHooks">CatHooks</a>
+              </li>
 
             <ul className="right ">
               <li>
