@@ -15,7 +15,7 @@ class Navbar extends Component {
           <div className="nav-wrapper grey darken-4 ">
             <ul className="left ">
               <li>
-                <a href="\" class="brand-logo margin">
+                <a href="\" className="brand-logo margin">
                   <span className="hide-on-small-only">React Playground</span>
                 </a>
               </li>
@@ -40,7 +40,7 @@ class Navbar extends Component {
               </li> */}
             </ul>
 
-            <ul class="right ">
+            <ul className="right ">
               <li>
                 <a
                   className="dropdown-trigger"

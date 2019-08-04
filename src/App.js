@@ -6,6 +6,7 @@ import Navbar from "./Components/Navbar/Navbar";
 import Disco from "./Pages/2Disco/Disco";
 import FormikDemo from "./Pages/3Formik/FormikDemo";
 import JsonView from "./Pages/5JsonView/JsonView";
+import CatHooks from "./Pages/6CatHooks/Form"
 
 class App extends Component {
   render() {
@@ -18,6 +19,7 @@ class App extends Component {
             <Route exact path="/Disco" component={Disco} />
             <Route exact path="/FormikDemo" component={FormikDemo} />
             <Route exact path="/JsonView" component={JsonView} />
+            <Route exact path="/CatHooks" component={CatHooks} />
           </Switch>
         </Router>
       </div>
