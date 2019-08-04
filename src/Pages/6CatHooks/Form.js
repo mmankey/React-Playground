@@ -60,6 +60,10 @@ const Form = () => {
         ))}
         <input type="submit" value="Submit" />
       </form>
+      <br/>
+      <div>
+          {catState[0].name}
+      </div>
     </div>
   );
 };
